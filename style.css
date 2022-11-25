@@ -1,0 +1,30 @@
+.displayCards {
+    display: flex;
+    flex-direction: row;
+}
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}
+
+.buttons {
+    margin: 30px 0;
+}
+
+.displayCardsCards {
+    margin: 20px 100px;
+    font-size: 50px;
+    justify-content: space-around;
+}
+
+.holdButton {
+    font-size: 16px;
+    margin: 20px 100px;
+}
+
+#winningTittle {
+    margin-left: 45%;
+}

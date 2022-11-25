@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeri</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="buttons">
+    <input
+            type="button"
+            onclick="test1()"
+            value="Deck" >
+
+            <input 
+            type="button"
+            onclick="createDeck()"
+            value="Create Deck" >
+
+            <input 
+            type="button"
+            onclick="shuffleDeck()"
+            value="Shuffle" >
+
+            <input 
+            type="button"
+            onclick="deal()"
+            value="Deal" >
+
+            <h1 id="winningTittle"></h1>
+        </div>
+
+
+    <div class="displayCards">
+        <h1 id="displayCardsOne" class="displayCardsCards"></h1>
+        <h1 id="displayCardsTwo" class="displayCardsCards"></h1>
+        <h1 id="displayCardsThree" class="displayCardsCards"></h1>
+        <h1 id="displayCardsFour" class="displayCardsCards"></h1>
+        <h1 id="displayCardsFive" class="displayCardsCards"></h1>
+
+    </div>
+
+    <div class="holdButtonsDiv">
+        <input 
+        id="SwitchCard1"
+        class="holdButton"
+        type="button"
+        onclick="holdCards1()"
+        value="Switch" >
+        <input 
+        id="SwitchCard2"
+        class="holdButton"
+        type="button"
+        onclick="holdCards2()"
+        value="Switch" >
+        <input 
+        id="SwitchCard3"
+        class="holdButton"
+        type="button"
+        onclick="holdCards3()"
+        value="Switch" >
+        <input 
+        id="SwitchCard4"
+        class="holdButton"
+        type="button"
+        onclick="holdCards4()"
+        value="Switch" >
+        <input 
+        id="SwitchCard5"
+        class="holdButton"
+        type="button"
+        onclick="holdCards5()"
+        value="Switch" >
+    </div>
+
+
+
+    <div class="poistaTesteja">
+        <h1 id="muutaTekstia1"></h1>
+        <h1 id="muutaTekstia2"></h1>
+    </div>
+
+
+
+    <script type="text/javascript" src="main.js"></script>    
+</body>
+
+</html>
