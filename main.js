@@ -23,7 +23,6 @@ console.log(deck);
       }
     }
   };
-
   function shuffleDeck() {
     let numberOfCards = deck.length;
     for (let i = 0; i < numberOfCards; i++) {
@@ -34,7 +33,8 @@ console.log(deck);
     }
   };
 
-  function deal() {
+
+function deal() {
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Switch") {
       document.getElementById("displayCardsOne").innerHTML = deck.pop();
@@ -372,7 +372,6 @@ console.log(deck);
     replaceCardSuit();
     defineFlush();
   };
-
 
 
   function holdCards1() {
