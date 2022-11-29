@@ -35,6 +35,7 @@ console.log(deck);
 
 
 function deal() {
+  document.getElementById("winningTittle").innerHTML = "";
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Switch") {
       document.getElementById("displayCardsOne").innerHTML = deck.pop();
@@ -330,33 +331,167 @@ function deal() {
       }
     };
 
-    function defineFlush() {
-      if (document.getElementById("displayCardsOne").textContent.includes("♥") &&
-      document.getElementById("displayCardsTwo").textContent.includes("♥") &&
-      document.getElementById("displayCardsThree").textContent.includes("♥") &&
-      document.getElementById("displayCardsFour").textContent.includes("♥") &&
-      document.getElementById("displayCardsFive").textContent.includes("♥")) {
-        document.getElementById("winningTittle").innerHTML = "FLUSH"
-      } else if (document.getElementById("displayCardsOne").textContent.includes("♦") &&
-      document.getElementById("displayCardsTwo").textContent.includes("♦") &&
-      document.getElementById("displayCardsThree").textContent.includes("♦") &&
-      document.getElementById("displayCardsFour").textContent.includes("♦") &&
-      document.getElementById("displayCardsFive").textContent.includes("♦")) {
-        document.getElementById("winningTittle").innerHTML = "FLUSH"
-    } else if  (document.getElementById("displayCardsOne").textContent.includes("♣") &&
-    document.getElementById("displayCardsTwo").textContent.includes("♣") &&
-    document.getElementById("displayCardsThree").textContent.includes("♣") &&
-    document.getElementById("displayCardsFour").textContent.includes("♣") &&
-    document.getElementById("displayCardsFive").textContent.includes("♣")) {
-      document.getElementById("winningTittle").innerHTML = "FLUSH"
-    } else if  (document.getElementById("displayCardsOne").textContent.includes("♠") &&
-    document.getElementById("displayCardsTwo").textContent.includes("♠") &&
-    document.getElementById("displayCardsThree").textContent.includes("♠") &&
-    document.getElementById("displayCardsFour").textContent.includes("♠") &&
-    document.getElementById("displayCardsFive").textContent.includes("♠")) {
-      document.getElementById("winningTittle").innerHTML = "FLUSH"
-    }
-    };
+
+    function defineWins() {
+      let card1 = document.getElementById("displayCardsOne").innerHTML;
+      let card2 = document.getElementById("displayCardsTwo").innerHTML;
+      let card3 = document.getElementById("displayCardsThree").innerHTML;
+      let card4 = document.getElementById("displayCardsFour").innerHTML;
+      let card5 = document.getElementById("displayCardsFive").innerHTML;
+      //let card1Number = card1.substr(0,1);
+      let card1Number = null
+      let card2Number = null
+      let card3Number = null
+      let card4Number = null
+      let card5Number = null
+
+      if (card1.length == 3) {
+            card1Number = 10
+      } else if (card1.substr(0,1) == "A") {
+            card1Number = 14
+      } else if (card1.substr(0,1) == "K") {
+        card1Number = 13
+      } else if (card1.substr(0,1) == "Q") {
+        card1Number = 12
+      } else if (card1.substr(0,1) == "J") {
+        card1Number = 11
+      } else {
+        card1Number = Number(card1.substr(0,1))
+      }
+      if (card2.length == 3) {
+        card2Number = 10
+  } else if (card2.substr(0,1) == "A") {
+        card2Number = 14
+  } else if (card2.substr(0,1) == "K") {
+    card2Number = 13
+  } else if (card2.substr(0,1) == "Q") {
+    card2Number = 12
+  } else if (card2.substr(0,1) == "J") {
+    card2Number = 11
+  } else {
+    card2Number = Number(card2.substr(0,1))
+  }
+  if (card3.length == 3) {
+    card3Number = 10
+} else if (card3.substr(0,1) == "A") {
+    card3Number = 14
+} else if (card3.substr(0,1) == "K") {
+card3Number = 13
+} else if (card3.substr(0,1) == "Q") {
+card3Number = 12
+} else if (card3.substr(0,1) == "J") {
+card3Number = 11
+} else {
+  card3Number = Number(card3.substr(0,1))
+}
+if (card4.length == 3) {
+  card4Number = 10
+} else if (card4.substr(0,1) == "A") {
+  card4Number = 14
+} else if (card4.substr(0,1) == "K") {
+card4Number = 13
+} else if (card4.substr(0,1) == "Q") {
+card4Number = 12
+} else if (card4.substr(0,1) == "J") {
+card4Number = 11
+} else {
+  card4Number = Number(card4.substr(0,1))
+}
+if (card5.length == 3) {
+  card5Number = 10
+} else if (card5.substr(0,1) == "A") {
+  card5Number = 14
+} else if (card5.substr(0,1) == "K") {
+card5Number = 13
+} else if (card5.substr(0,1) == "Q") {
+card5Number = 12
+} else if (card5.substr(0,1) == "J") {
+card5Number = 11
+} else {
+card5Number = Number(card5.substr(0,1))
+}
+      let cardArray = [card1Number, card2Number, card3Number, card4Number, card5Number]
+      function defineFlushAndStraight() {
+        function checkPairs() {
+          let pair = 0
+          //let cardArray = [diceNumber1,diceNumber2,diceNumber3,diceNumber4,diceNumber5];
+          for (let i = 1; i <= 4; i++) {
+              if (cardArray[0] == cardArray[i]) {
+                  pair = pair + 1;
+              }
+          }
+          for (let i = 2; i <= 4; i++) {
+              if (cardArray[1] == cardArray[i]) {
+                  pair = pair + 1;
+              }
+          }
+          for (let i = 3; i <= 4; i++) {
+              if (cardArray[2] == cardArray[i]) {
+                  pair = pair + 1;
+              }
+          }
+          for (let i = 4; i <= 4; i++) {
+              if (cardArray[3] == cardArray[i]) {
+                  pair = pair + 1;
+              }
+          }
+              if (pair == 2) {
+                  document.getElementById("winningTittle").innerHTML = "Two pairs";
+           }  else if (pair == 3) {
+                  document.getElementById("winningTittle").innerHTML = "Three of a Kind";
+           }  else if (pair == 4) {
+                  document.getElementById("winningTittle").innerHTML = "Full House";
+           }  else if (pair == 6) {
+                  document.getElementById("winningTittle").innerHTML = "Four of a Kind";
+           } 
+          
+          };
+        let flush = false
+        let straight = false
+        if (document.getElementById("displayCardsOne").textContent.includes("♥") &&
+        document.getElementById("displayCardsTwo").textContent.includes("♥") &&
+        document.getElementById("displayCardsThree").textContent.includes("♥") &&
+        document.getElementById("displayCardsFour").textContent.includes("♥") &&
+        document.getElementById("displayCardsFive").textContent.includes("♥")) {
+          flush = true
+        } else if (document.getElementById("displayCardsOne").textContent.includes("♦") &&
+        document.getElementById("displayCardsTwo").textContent.includes("♦") &&
+        document.getElementById("displayCardsThree").textContent.includes("♦") &&
+        document.getElementById("displayCardsFour").textContent.includes("♦") &&
+        document.getElementById("displayCardsFive").textContent.includes("♦")) {
+          flush = true
+      } else if  (document.getElementById("displayCardsOne").textContent.includes("♣") &&
+      document.getElementById("displayCardsTwo").textContent.includes("♣") &&
+      document.getElementById("displayCardsThree").textContent.includes("♣") &&
+      document.getElementById("displayCardsFour").textContent.includes("♣") &&
+      document.getElementById("displayCardsFive").textContent.includes("♣")) {
+        flush = true
+      } else if  (document.getElementById("displayCardsOne").textContent.includes("♠") &&
+      document.getElementById("displayCardsTwo").textContent.includes("♠") &&
+      document.getElementById("displayCardsThree").textContent.includes("♠") &&
+      document.getElementById("displayCardsFour").textContent.includes("♠") &&
+      document.getElementById("displayCardsFive").textContent.includes("♠")) {
+        flush = true
+      } if (flush == true && straight == false) {
+        document.getElementById("winningTittle").innerHTML = "Flush";
+      }
+        cardArray.sort(function(a, b){return a-b});
+        if (cardArray[1] == cardArray[0] + 1 && cardArray[2] == cardArray[1] + 1 && cardArray[3] == cardArray[2] + 1 && cardArray[4] == cardArray[3] + 1) {
+            straight = true
+        } else if (cardArray[0] == 2 && cardArray[1] == 3 && cardArray[2] == 4 && cardArray[3] == 5 && cardArray[4] == 14) {
+          straight = true
+        }
+        if (straight == true && flush == false) {
+          document.getElementById("winningTittle").innerHTML = "Straight";
+        }
+        checkPairs()
+        if (flush == true && straight == true) {
+          document.getElementById("winningTittle").innerHTML = "Straight Flush";
+        }
+      };
+      defineFlushAndStraight();
+      };
+    
 
     checkCard();
     replaceCard1();
@@ -370,7 +505,7 @@ function deal() {
     replaceCard9();
     replaceCard10();
     replaceCardSuit();
-    defineFlush();
+    defineWins();
   };
 
 
