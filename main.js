@@ -28,6 +28,25 @@ console.log(deck);
     }
   };
 function deal() {
+  function createDeckAndShuffle() {
+  // Create deck
+  if (deck.length == 0) {
+    for (let suit in suits) {
+      for (let value in values) {
+        deck.push(values[value] + " of " + suits[suit]);
+      }
+    }
+    // Shuffle deck
+    let numberOfCards = deck.length;
+    for (let i = 0; i < numberOfCards; i++) {
+      let j = Math.floor(Math.random() * numberOfCards);
+      let tmp = deck[i];
+      deck[i] = deck[j];
+      deck[j] = tmp;
+    }
+  }
+}
+createDeckAndShuffle();
   document.getElementById("winningTittle").innerHTML = "";
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Switch") {
@@ -493,8 +512,6 @@ card5Number = Number(card5.substr(0,1))
       };
       defineFlushAndStraight();
       };
-    
-
     checkCard();
     replaceCard1();
     replaceCard2();
