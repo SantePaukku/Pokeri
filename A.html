@@ -23,7 +23,7 @@
 
             <input 
             type="button"
-            onclick="doubling()"
+            onclick="doublingStart()"
             value="Doubling" >
 
             <h1 id="winningTittle"></h1>
@@ -75,11 +75,11 @@
 <div id="doubling">
     <div>
         <h1 id="doublingTittle" ></h1>
-        <h1 id="doublingCard">testi</h1>
+        <h1 id="doublingCard"></h1>
     </div>
     <div>
-        <input id="doublingLow" class="doublingButtons" type="button" onclick="" value="Low" >
-        <input id="doublingHigh" class="doublingButtons" type="button" onclick="" value="High" >
+        <input id="doublingLow" class="doublingButtons" type="button" onclick="doublingPickLow()" value="Low" >
+        <input id="doublingHigh" class="doublingButtons" type="button" onclick="testGlobalFunction()" value="High" >
     </div>    
 </div>
 

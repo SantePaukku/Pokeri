@@ -11,23 +11,8 @@ const deck = [];
 console.log(suits.length)
 console.log(deck);
   };
-  function createDeck() {
-    for (let suit in suits) {
-      for (let value in values) {
-        deck.push(values[value] + " of " + suits[suit]);
-      }
-    }
-  };
-  function shuffleDeck() {
-    let numberOfCards = deck.length;
-    for (let i = 0; i < numberOfCards; i++) {
-      let j = Math.floor(Math.random() * numberOfCards);
-      let tmp = deck[i];
-      deck[i] = deck[j];
-      deck[j] = tmp;
-    }
-  };
 function deal() {
+  document.getElementById("doublingTittle").innerHTML = "";
   function createDeckAndShuffle() {
   // Create deck
   if (deck.length == 0) {
@@ -526,8 +511,12 @@ card5Number = Number(card5.substr(0,1))
     replaceCardSuit();
     defineWins();
   };
-  function doubling() {
-    //Create deck
+  function doublingStart() {
+    document.getElementById("doublingTittle").innerHTML = "Pick Low or High";
+  };
+    function doublingPickLow() {
+      doublingGenerateCard();
+   function doublingGenerateCard(){
     let deck = [];
     for (let suit in suits) {
       for (let value in values) {
@@ -542,11 +531,52 @@ card5Number = Number(card5.substr(0,1))
       deck[i] = deck[j];
       deck[j] = tmp;
     }
-    document.getElementById("doublingTittle").innerHTML = "Pick Low or High";
     let doublingCardValue = deck.pop();
-    console.log(doublingCardValue);
+    // Pick font color
+    if (doublingCardValue.includes("Diamond") || doublingCardValue.includes("Hearts")) {
+      document.getElementById("doublingCard").classList.remove("black");
+      document.getElementById("doublingCard").classList.add("red");
+     }
+     else if (doublingCardValue.includes("Clubs") || doublingCardValue.includes("Spades")) {
+      document.getElementById("doublingCard").classList.remove("red");
+      document.getElementById("doublingCard").classList.add("black");
+      }
+      let newCard1 = doublingCardValue.replace(" of ","");
+      let newCard2 = null;
+      let doublingCardDisplay = null;
+    if (newCard1.includes("Ace")) {
+      newCard2 = newCard1.replace("Ace","A")
+    } else if (newCard1.includes("King")) {
+      newCard2 = newCard1.replace("King","K")
+    } else if (newCard1.includes("Queen")) {
+      newCard2 = newCard1.replace("Queen","Q")
+    } else if (newCard1.includes("Jack")) {
+      newCard2 = newCard1.replace("Jack","J")
+    } else {
+      newCard2 = newCard1
+    } 
+    if (newCard2.includes("Hearts")) {
+      doublingCardDisplay = newCard2.replace("Hearts","♥")
+    } else if (newCard2.includes("Diamonds")) {
+      doublingCardDisplay = newCard2.replace("Diamonds","♦")
+    } else if (newCard2.includes("Clubs")) {
+      doublingCardDisplay = newCard2.replace("Clubs","♣")
+    } else if (newCard2.includes("Spades")) {
+      doublingCardDisplay = newCard2.replace("Spades","♠")
+    }
+      console.log(doublingCardDisplay);
+      //document.getElementById("doublingCard").innerHTML = doublingCardDisplay;
   };
+};
 
+function testGlobalFunction() {
+  function testiii() {
+
+  }
+}
+
+
+ 
 
   function holdCards1() {
     let card1 = document.getElementById("SwitchCard1")
