@@ -28,3 +28,23 @@
 #winningTittle {
     margin-left: 45%;
 }
+
+#doubling {
+    margin-top: 50px;
+    margin-left: 45%;
+}
+.doublingButtons {
+    color: black;
+}
+#doublingLow {
+    color: black;
+}
+#doublingHigh {
+    color: black;
+}
+#doublingCard {
+    margin-left: 10px;
+}
+#doublingTittle {
+   color: black;
+}

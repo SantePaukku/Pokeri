@@ -14,7 +14,7 @@
     <input
             type="button"
             onclick="test1()"
-            value="Deck" >
+            value="(Console) Deck" >
 
             <input 
             type="button"
@@ -30,6 +30,11 @@
             type="button"
             onclick="deal()"
             value="Deal" >
+
+            <input 
+            type="button"
+            onclick="doubling()"
+            value="Doubling" >
 
             <h1 id="winningTittle"></h1>
         </div>
@@ -77,7 +82,16 @@
         value="Switch" >
     </div>
 
-
+<div id="doubling">
+    <div>
+        <h1 id="doublingTittle" ></h1>
+        <h1 id="doublingCard">testi</h1>
+    </div>
+    <div>
+        <input id="doublingLow" class="doublingButtons" type="button" onclick="" value="Low" >
+        <input id="doublingHigh" class="doublingButtons" type="button" onclick="" value="High" >
+    </div>    
+</div>
 
     <div class="poistaTesteja">
         <h1 id="muutaTekstia1"></h1>

@@ -1,13 +1,9 @@
 const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
-
-
 const deck = [];
-
   function test1() {
   console.log(deck);
   };
-
   function test2() {
     for (let i = 0; i < suits.length; i++) {
       deck.push(suits[i]);
@@ -15,7 +11,6 @@ const deck = [];
 console.log(suits.length)
 console.log(deck);
   };
-
   function createDeck() {
     for (let suit in suits) {
       for (let value in values) {
@@ -32,8 +27,6 @@ console.log(deck);
       deck[j] = tmp;
     }
   };
-
-
 function deal() {
   document.getElementById("winningTittle").innerHTML = "";
     let card1 = document.getElementById("SwitchCard1")
@@ -338,7 +331,6 @@ function deal() {
       let card3 = document.getElementById("displayCardsThree").innerHTML;
       let card4 = document.getElementById("displayCardsFour").innerHTML;
       let card5 = document.getElementById("displayCardsFive").innerHTML;
-      //let card1Number = card1.substr(0,1);
       let card1Number = null
       let card2Number = null
       let card3Number = null
@@ -414,7 +406,6 @@ card5Number = Number(card5.substr(0,1))
       function defineFlushAndStraight() {
         function checkPairs() {
           let pair = 0
-          //let cardArray = [diceNumber1,diceNumber2,diceNumber3,diceNumber4,diceNumber5];
           for (let i = 1; i <= 4; i++) {
               if (cardArray[0] == cardArray[i]) {
                   pair = pair + 1;
@@ -484,7 +475,7 @@ card5Number = Number(card5.substr(0,1))
         if (straight == true && flush == false) {
           document.getElementById("winningTittle").innerHTML = "Straight";
         }
-        checkPairs()
+        checkPairs();
         if (flush == true && straight == true) {
           document.getElementById("winningTittle").innerHTML = "Straight Flush";
         }
@@ -506,6 +497,26 @@ card5Number = Number(card5.substr(0,1))
     replaceCard10();
     replaceCardSuit();
     defineWins();
+  };
+  function doubling() {
+    //Create deck
+    let deck = [];
+    for (let suit in suits) {
+      for (let value in values) {
+        deck.push(values[value] + " of " + suits[suit]);
+      }
+    }
+    // Shuffle deck
+    let numberOfCards = deck.length;
+    for (let i = 0; i < numberOfCards; i++) {
+      let j = Math.floor(Math.random() * numberOfCards);
+      let tmp = deck[i];
+      deck[i] = deck[j];
+      deck[j] = tmp;
+    }
+    document.getElementById("doublingTittle").innerHTML = "Pick Low or High";
+    let doublingCardValue = deck.pop();
+    console.log(doublingCardValue);
   };
 
 
