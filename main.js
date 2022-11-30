@@ -437,8 +437,10 @@ card5Number = Number(card5.substr(0,1))
            } 
           
           };
-        let flush = false
-        let straight = false
+        let flush = false;
+        let straight = false;
+        let straightFlush = false;
+        let royalFlush = false;
         if (document.getElementById("displayCardsOne").textContent.includes("♥") &&
         document.getElementById("displayCardsTwo").textContent.includes("♥") &&
         document.getElementById("displayCardsThree").textContent.includes("♥") &&
@@ -475,10 +477,19 @@ card5Number = Number(card5.substr(0,1))
         if (straight == true && flush == false) {
           document.getElementById("winningTittle").innerHTML = "Straight";
         }
-        checkPairs();
         if (flush == true && straight == true) {
+          straightFlush = true
+        }
+        if (straightFlush == true && royalFlush == false) {
           document.getElementById("winningTittle").innerHTML = "Straight Flush";
         }
+        if (straightFlush == true && cardArray[0] == 10) {
+          royalFlush = true
+        }
+        if (royalFlush == true) {
+          document.getElementById("winningTittle").innerHTML = "Royal Flush";
+        }
+        checkPairs();
       };
       defineFlushAndStraight();
       };
