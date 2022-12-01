@@ -1,6 +1,9 @@
 const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
-const deck = [];
+let deck = [];
+let moneyValue = null;
+let dealCards = true;
+document.getElementById("displayMoney").innerHTML = "Money: 10€";
   function test1() {
   console.log(deck);
   };
@@ -12,10 +15,24 @@ console.log(suits.length)
 console.log(deck);
   };
 function deal() {
-  document.getElementById("doublingTittle").innerHTML = "";
+  if (moneyValue == null) {
+    moneyValue = 10
+  }
+  if (dealCards == true) {
+    deck = [];
+    moneyValue = moneyValue - 1;
+    createDeckAndShuffle();
+    console.log("TRUUUU");
+    dealCards = false;
+  } else if (dealCards == false) {
+    console.log("falsee");
+    dealCards = true;
+  }
+
+  
   function createDeckAndShuffle() {
   // Create deck
-  if (deck.length == 0) {
+  if (dealCards == true || dealCards == null) {
     for (let suit in suits) {
       for (let value in values) {
         deck.push(values[value] + " of " + suits[suit]);
@@ -31,7 +48,6 @@ function deal() {
     }
   }
 }
-createDeckAndShuffle();
   document.getElementById("winningTittle").innerHTML = "";
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Switch") {
@@ -471,6 +487,7 @@ card5Number = Number(card5.substr(0,1))
         flush = true
       } if (flush == true && straight == false) {
         document.getElementById("winningTittle").innerHTML = "Flush";
+        moneyValue = moneyValue + 20;
       }
         cardArray.sort(function(a, b){return a-b});
         if (cardArray[1] == cardArray[0] + 1 && cardArray[2] == cardArray[1] + 1 && cardArray[3] == cardArray[2] + 1 && cardArray[4] == cardArray[3] + 1) {
@@ -510,13 +527,15 @@ card5Number = Number(card5.substr(0,1))
     replaceCard10();
     replaceCardSuit();
     defineWins();
+      
+    
+    document.getElementById("displayMoney").innerHTML = "Money:" + " " + moneyValue + "€";
+    document.getElementById("doublingTittle").innerHTML = "";
   };
   function doublingStart() {
     document.getElementById("doublingTittle").innerHTML = "Pick Low or High";
   };
-    function doublingPickLow() {
-      doublingGenerateCard();
-   function doublingGenerateCard(){
+   function doublingGenerateCard() {
     let deck = [];
     for (let suit in suits) {
       for (let value in values) {
@@ -565,19 +584,27 @@ card5Number = Number(card5.substr(0,1))
       doublingCardDisplay = newCard2.replace("Spades","♠")
     }
       console.log(doublingCardDisplay);
-      //document.getElementById("doublingCard").innerHTML = doublingCardDisplay;
-  };
-};
+      function doublingPickLow() {
+        document.getElementById("doublingCard").innerHTML = doublingCardDisplay;
 
+      }
+      doublingPickLow();
+  };
+
+
+
+/*
 function testGlobalFunction() {
+  let numberTest = 5
+  console.log("Eka:" + numberTest)
   function testiii() {
+    numberTest = 10;
+    console.log("Toka:" + numberTest)
 
   }
-}
-
-
- 
-
+  testiii();
+};
+*/
   function holdCards1() {
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Keep") {
@@ -623,9 +650,6 @@ function testGlobalFunction() {
       card1.value = "Keep"
     }
   };
-
-
-
 //testejä
   function lisaaTesti1() {
   let tervehdys = document.getElementById("muutaTekstia1").innerHTML
@@ -643,8 +667,6 @@ function testGlobalFunction() {
     let uusiTeksti = tervehdys.replace("World","Planet")
   document.getElementById("muutaTekstia2").innerHTML = uusiTeksti
   };
-
-
   // document.getElementById("gameWinnerIs").innerHTML = "Pelaaja";
   //tulos2.textContent.includes("Bot: Kivi")
   //element.classList.remove("my-class");

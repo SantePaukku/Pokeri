@@ -48,3 +48,8 @@
 #doublingTittle {
    color: black;
 }
+
+#displayMoney {
+    text-align: right;
+    margin-right: 50px;
+}
