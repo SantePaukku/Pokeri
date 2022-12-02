@@ -12,6 +12,7 @@
 <div>
     <div>
     <div id="button" class="buttons">
+        <input type="button" onclick="checkDealTrueOrNot()" value="(Console) check deal" >
     <input
             type="button"
             onclick="test1()"
@@ -25,7 +26,7 @@
 
             <input 
             type="button"
-            onclick="doublingStart()"
+            onclick="doublingStart();"
             value="Doubling" >
             <h2 id="displayMoney">Money:</h2>
         </div>
@@ -82,8 +83,8 @@
         <h1 id="doublingCard" class="displayCardsCards"></h1>
     </div>
     <div>
-        <input id="doublingLow" class="doublingButtons" type="button" onclick="doublingGenerateCard()" value="Low" >
-        <input id="doublingHigh" class="doublingButtons" type="button" onclick="testGlobalFunction()" value="High" >
+        <input id="doublingLow" class="doublingButtons" type="button" onclick="doublingPickLow()" value="Low" >
+        <input id="doublingHigh" class="doublingButtons" type="button" onclick="doublingPickHigh()" value="High" >
     </div>    
 </div>
 
@@ -94,7 +95,8 @@
 
 
 
-    <script type="text/javascript" src="main.js"></script>    
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="test.js"></script> 
 </body>
 
 </html>

@@ -22,12 +22,14 @@ function deal() {
     deck = [];
     moneyValue = moneyValue - 1;
     createDeckAndShuffle();
-    console.log("TRUUUU");
     dealCards = false;
   } else if (dealCards == false) {
-    console.log("falsee");
     dealCards = true;
   }
+  
+    
+  
+  
 
   
   function createDeckAndShuffle() {
@@ -48,27 +50,46 @@ function deal() {
     }
   }
 }
-  document.getElementById("winningTittle").innerHTML = "";
-    let card1 = document.getElementById("SwitchCard1")
-    if (card1.value == "Switch") {
-      document.getElementById("displayCardsOne").innerHTML = deck.pop();
-    }
-    let card2 = document.getElementById("SwitchCard2")
-    if (card2.value == "Switch") {
-      document.getElementById("displayCardsTwo").innerHTML = deck.pop();
-    }
-    let card3 = document.getElementById("SwitchCard3")
-    if (card3.value == "Switch") {
-      document.getElementById("displayCardsThree").innerHTML = deck.pop();
-    }
-    let card4 = document.getElementById("SwitchCard4")
-    if (card4.value == "Switch") {
-      document.getElementById("displayCardsFour").innerHTML = deck.pop();
-    }
-    let card5 = document.getElementById("SwitchCard5")
-    if (card5.value == "Switch") {
-      document.getElementById("displayCardsFive").innerHTML = deck.pop();
-    }
+let holdCard1 = document.getElementById("SwitchCard1")
+let holdCard2 = document.getElementById("SwitchCard2")
+let holdCard3 = document.getElementById("SwitchCard3")
+let holdCard4 = document.getElementById("SwitchCard4")
+let holdCard5 = document.getElementById("SwitchCard5")
+
+document.getElementById("winningTittle").innerHTML = "";
+
+  if (holdCard1.value == "Keep" && dealCards == false) {
+    holdCard1.value = "Switch"
+  }
+  if (holdCard2.value == "Keep" && dealCards == false) {
+    holdCard2.value = "Switch"
+  }
+  if (holdCard3.value == "Keep" && dealCards == false) {
+    holdCard3.value = "Switch"
+  }
+  if (holdCard4.value == "Keep" && dealCards == false) {
+    holdCard4.value = "Switch"
+  }
+  if (holdCard5.value == "Keep" && dealCards == false) {
+    holdCard5.value = "Switch"
+  }
+  if (holdCard1.value == "Switch") {
+    document.getElementById("displayCardsOne").innerHTML = deck.pop();
+  }
+  if (holdCard2.value == "Switch") {
+    document.getElementById("displayCardsTwo").innerHTML = deck.pop();
+  }
+  if (holdCard3.value == "Switch") {
+    document.getElementById("displayCardsThree").innerHTML = deck.pop();
+  }
+  if (holdCard4.value == "Switch") {
+    document.getElementById("displayCardsFour").innerHTML = deck.pop();
+  }
+  if (holdCard5.value == "Switch") {
+    document.getElementById("displayCardsFive").innerHTML = deck.pop();
+  }
+
+
     function checkCard() {
       if (document.getElementById("displayCardsOne").textContent.includes("Diamond") || 
     document.getElementById("displayCardsOne").textContent.includes("Hearts")) {
@@ -446,13 +467,13 @@ card5Number = Number(card5.substr(0,1))
                   pair = pair + 1;
               }
           }
-              if (pair == 2) {
+              if (pair == 2 && dealCards == true) {
                   document.getElementById("winningTittle").innerHTML = "Two pairs";
-           }  else if (pair == 3) {
+           }  else if (pair == 3 && dealCards == true) {
                   document.getElementById("winningTittle").innerHTML = "Three of a Kind";
-           }  else if (pair == 4) {
+           }  else if (pair == 4 && dealCards == true) {
                   document.getElementById("winningTittle").innerHTML = "Full House";
-           }  else if (pair == 6) {
+           }  else if (pair == 6 && dealCards == true) {
                   document.getElementById("winningTittle").innerHTML = "Four of a Kind";
            } 
           
@@ -536,6 +557,7 @@ card5Number = Number(card5.substr(0,1))
     document.getElementById("doublingTittle").innerHTML = "Pick Low or High";
   };
    function doublingGenerateCard() {
+    // create deck
     let deck = [];
     for (let suit in suits) {
       for (let value in values) {
@@ -583,16 +605,61 @@ card5Number = Number(card5.substr(0,1))
     } else if (newCard2.includes("Spades")) {
       doublingCardDisplay = newCard2.replace("Spades","♠")
     }
-      console.log(doublingCardDisplay);
-      function doublingPickLow() {
-        document.getElementById("doublingCard").innerHTML = doublingCardDisplay;
-
-      }
-      doublingPickLow();
+    document.getElementById("doublingCard").innerHTML = doublingCardDisplay;
   };
+  function doublingPickLow() {
+    doublingGenerateCard();
+    // Get card value
+    let doublingCard1 = document.getElementById("doublingCard").innerHTML
+    let doublingCard2 = null
+    let doublingCardValue = null
+    if (doublingCard1.length == 3) {
+      doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,2)
+    } else if (doublingCard1.length == 2) {
+    doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,1)
+    } if (doublingCard2 == "A") {
+      doublingCardValue = 1
+    } else if (doublingCard2 == "K") {
+      doublingCardValue = 13
+    } else if (doublingCard2 == "Q") {
+      doublingCardValue = 12
+    } else if (doublingCard2 == "J") {
+      doublingCardValue = 11
+    } else doublingCardValue = Number(doublingCard2)
+    // Check if number is low
+      if (doublingCardValue <7) {
+    document.getElementById('doublingTittle').innerHTML = "You Win"
+      } else {
+      document.getElementById('doublingTittle').innerHTML = "You Lose"
+      }
+  }
 
-
-
+  function doublingPickHigh() {
+    doublingGenerateCard();
+    // Get card value
+    let doublingCard1 = document.getElementById("doublingCard").innerHTML
+    let doublingCard2 = null
+    let doublingCardValue = null
+    if (doublingCard1.length == 3) {
+      doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,2)
+    } else if (doublingCard1.length == 2) {
+    doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,1)
+    } if (doublingCard2 == "A") {
+      doublingCardValue = 1
+    } else if (doublingCard2 == "K") {
+      doublingCardValue = 13
+    } else if (doublingCard2 == "Q") {
+      doublingCardValue = 12
+    } else if (doublingCard2 == "J") {
+      doublingCardValue = 11
+    } else doublingCardValue = Number(doublingCard2)
+    // Check if number is high
+    if (doublingCardValue >7) {
+      document.getElementById('doublingTittle').innerHTML = "You Win"
+        } else {
+        document.getElementById('doublingTittle').innerHTML = "You Lose"
+        }
+  }
 /*
 function testGlobalFunction() {
   let numberTest = 5
@@ -605,6 +672,7 @@ function testGlobalFunction() {
   testiii();
 };
 */
+
   function holdCards1() {
     let card1 = document.getElementById("SwitchCard1")
     if (card1.value == "Keep") {
@@ -614,6 +682,7 @@ function testGlobalFunction() {
       card1.value = "Keep"
     }
   };
+  
   function holdCards2() {
     let card1 = document.getElementById("SwitchCard2")
     if (card1.value == "Keep") {
@@ -650,6 +719,10 @@ function testGlobalFunction() {
       card1.value = "Keep"
     }
   };
+  function checkDealTrueOrNot(){
+    console.log(dealCards)
+  }
+
 //testejä
   function lisaaTesti1() {
   let tervehdys = document.getElementById("muutaTekstia1").innerHTML
@@ -670,4 +743,5 @@ function testGlobalFunction() {
   // document.getElementById("gameWinnerIs").innerHTML = "Pelaaja";
   //tulos2.textContent.includes("Bot: Kivi")
   //element.classList.remove("my-class");
+  //document.getElementById("displayMoney").innerHTML = moneyValue = moneyValue + 2;
   //♠♥♦♣
