@@ -53,3 +53,9 @@
     text-align: right;
     margin-right: 50px;
 }
+
+#winningMoneyDisplay {
+    color: black;
+    text-align: center;
+    margin-right: 40px;
+}
