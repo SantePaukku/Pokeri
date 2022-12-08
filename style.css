@@ -11,7 +11,7 @@
 }
 
 .buttons {
-    margin: 30px 0;
+    margin: 30px 0 0 37rem;
 }
 
 .displayCardsCards {
@@ -58,4 +58,8 @@
     color: black;
     text-align: center;
     margin-right: 40px;
+}
+
+#dealButton {
+    font-size: 25px;
 }
