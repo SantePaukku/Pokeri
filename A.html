@@ -50,32 +50,39 @@
     <div class="holdButtonsDiv">
         <input 
         id="SwitchCard1"
-        class="holdButton"
+        name="kortti"
+        class="kortti holdButton"
+        disabled
         type="button"
         onclick="holdCards1()"
         value="Switch" >
         <input 
         id="SwitchCard2"
-        class="holdButton"
+        class="kortti holdButton"
+        name="kortti"
         type="button"
+        disabled
         onclick="holdCards2()"
         value="Switch" >
         <input 
         id="SwitchCard3"
-        class="holdButton"
+        class="kortti holdButton"
         type="button"
+        disabled
         onclick="holdCards3()"
         value="Switch" >
         <input 
         id="SwitchCard4"
-        class="holdButton"
+        class="kortti holdButton"
         type="button"
+        disabled
         onclick="holdCards4()"
         value="Switch" >
         <input 
         id="SwitchCard5"
-        class="holdButton"
+        class="kortti holdButton"
         type="button"
+        disabled
         onclick="holdCards5()"
         value="Switch" >
     </div>
@@ -86,8 +93,8 @@
         <h1 id="doublingCard" class="displayCardsCards"></h1>
     </div>
     <div>
-        <input id="doublingLow" class="doublingButtons" type="button" onclick="doublingPickLow()" value="Low" >
-        <input id="doublingHigh" class="doublingButtons" type="button" onclick="doublingPickHigh()" value="High" >
+        <input id="doublingLow" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickLow()" value="Low" >
+        <input id="doublingHigh" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickHigh()" value="High" >
     </div>    
 </div>
 

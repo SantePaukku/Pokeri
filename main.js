@@ -27,7 +27,15 @@ function deal() {
     dealCards = false;
   } else if (dealCards == false) {
     dealCards = true;
+    
   }
+  const nappit = document.querySelectorAll(".kortti");
+  const tuplausLukkot = document.querySelectorAll(".tuplaus");
+  nappit.forEach(nappi => {
+    nappi.disabled = false;
+  });
+  
+ 
   function createDeckAndShuffle() {
   // Create deck
   if (dealCards == true || dealCards == null) {
@@ -567,6 +575,12 @@ card5Number = Number(card5.substr(0,1))
     replaceCard10();
     replaceCardSuit();
     defineWins();
+    if (dealCards == true) {
+      nappit.forEach(nappi => {
+        nappi.disabled = true;
+      })
+    }
+
     if (winningMoney == 0 && dealCards == true) {
       document.getElementById("winningTittle").innerHTML = "No win";
     }
@@ -583,7 +597,15 @@ card5Number = Number(card5.substr(0,1))
         winningMoney = 0;
         
       }
-  
+      if (winningMoney == 0) {
+        tuplausLukkot.forEach(tuplaus => {
+          tuplaus.disabled = true;
+        })
+      } else if (winningMoney >= 1) {
+        tuplausLukkot.forEach(tuplaus => {
+          tuplaus.disabled = false;
+        })
+      }
 
     //document.getElementById("displayMoney").innerHTML = "Money:" + " " + moneyValue + "€";
     document.getElementById("doublingTittle").innerHTML = "";
@@ -676,6 +698,7 @@ card5Number = Number(card5.substr(0,1))
         winningMoney = 0;
         document.getElementById('doublingTittle').innerHTML = "You Lose"
         document.getElementById("winningMoneyDisplay").innerHTML = "";
+        
       }
 } else {
   document.getElementById('doublingTittle').innerHTML = "No money"
