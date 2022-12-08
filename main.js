@@ -1,7 +1,7 @@
 const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
 let deck = [];
-let moneyValue = 1;
+let moneyValue = 5;
 let dealCards = true;
 let winningMoney = 0;
 document.getElementById("displayMoney").innerHTML = "Money: " + moneyValue + "€";
@@ -567,6 +567,9 @@ card5Number = Number(card5.substr(0,1))
     replaceCard10();
     replaceCardSuit();
     defineWins();
+    if (winningMoney == 0 && dealCards == true) {
+      document.getElementById("winningTittle").innerHTML = "No win";
+    }
     if (winningMoney > 0) {
       document.getElementById("winningMoneyDisplay").innerHTML = "Win:" + " " + winningMoney + "€";
     }
