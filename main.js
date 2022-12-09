@@ -676,6 +676,7 @@ card5Number = Number(card5.substr(0,1))
     let doublingCard1 = document.getElementById("doublingCard").innerHTML
     let doublingCard2 = null
     let doublingCardValue = null
+    const tuplausLukkot = document.querySelectorAll(".tuplaus");
     if (doublingCard1.length == 3) {
       doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,2)
     } else if (doublingCard1.length == 2) {
@@ -698,6 +699,10 @@ card5Number = Number(card5.substr(0,1))
         winningMoney = 0;
         document.getElementById('doublingTittle').innerHTML = "You Lose"
         document.getElementById("winningMoneyDisplay").innerHTML = "";
+        tuplausLukkot.forEach(nappi => {
+          nappi.disabled = true;
+        });
+
         
       }
 } else {
@@ -713,6 +718,7 @@ card5Number = Number(card5.substr(0,1))
     let doublingCard1 = document.getElementById("doublingCard").innerHTML
     let doublingCard2 = null
     let doublingCardValue = null
+    const tuplausLukkot = document.querySelectorAll(".tuplaus");
     if (doublingCard1.length == 3) {
       doublingCard2 = document.getElementById("doublingCard").innerHTML.substr(0,2)
     } else if (doublingCard1.length == 2) {
@@ -735,6 +741,10 @@ card5Number = Number(card5.substr(0,1))
         winningMoney = 0;
         document.getElementById('doublingTittle').innerHTML = "You Lose"
         document.getElementById("winningMoneyDisplay").innerHTML = "";
+        tuplausLukkot.forEach(nappi => {
+          nappi.disabled = true;
+        });
+
       }
 } else {
   document.getElementById('doublingTittle').innerHTML = "No money"
