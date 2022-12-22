@@ -1,3 +1,7 @@
+body {
+    border: solid 10px red;
+}
+
 .displayCards {
     display: flex;
     flex-direction: row;
@@ -62,4 +66,171 @@
 
 #dealButton {
     font-size: 25px;
+}
+
+.cardImageStyle {
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+.risti2{
+    background-image: url(./Kortit/2_of_clubs.png);
+}
+.risti3{
+    background-image: url(./Kortit/3_of_clubs.png);
+}
+.risti4{
+    background-image: url(./Kortit/4_of_clubs.png);
+}
+.risti5{
+    background-image: url(./Kortit/5_of_clubs.png);
+}
+.risti6{
+    background-image: url(./Kortit/6_of_clubs.png);
+}
+.risti7{
+    background-image: url(./Kortit/7_of_clubs.png);
+}
+.risti8{
+    background-image: url(./Kortit/8_of_clubs.png);
+}
+.risti9{
+    background-image: url(./Kortit/9_of_clubs.png);
+}
+.risti10{
+    background-image: url(./Kortit/10_of_clubs.png);
+}
+.ristiJ{
+    background-image: url(./Kortit/jack_of_clubs2.png);
+}
+.ristiQ{
+    background-image: url(./Kortit/queen_of_clubs2.png);
+}
+.ristiK{
+    background-image: url(./Kortit/king_of_clubs2.png);
+}
+.ristiA{
+    background-image: url(./Kortit/ace_of_clubs.png);
+}
+.hertta2{
+    background-image: url(./Kortit/2_of_hearts.png);
+}
+.hertta3{
+    background-image: url(./Kortit/3_of_hearts.png);
+}
+.hertta4{
+    background-image: url(./Kortit/4_of_hearts.png);
+}
+.hertta5{
+    background-image: url(./Kortit/5_of_hearts.png);
+}
+.hertta6{
+    background-image: url(./Kortit/6_of_hearts.png);
+}
+.hertta7{
+    background-image: url(./Kortit/7_of_hearts.png);
+}
+.hertta8{
+    background-image: url(./Kortit/8_of_hearts.png);
+}
+.hertta9{
+    background-image: url(./Kortit/9_of_hearts.png);
+}
+.hertta10{
+    background-image: url(./Kortit/10_of_hearts.png);
+}
+.herttaJ{
+    background-image: url(./Kortit/jack_of_hearts2.png);
+}
+.herttaQ{
+    background-image: url(./Kortit/queen_of_hearts2.png);
+}
+.herttaK{
+    background-image: url(./Kortit/king_of_hearts2.png);
+}
+.herttaA{
+    background-image: url(./Kortit/ace_of_hearts.png);
+}
+.ruutu2{
+    background-image: url(./Kortit/2_of_diamonds.png);
+}
+.ruutu3{
+    background-image: url(./Kortit/3_of_diamonds.png);
+}
+.ruutu4{
+    background-image: url(./Kortit/4_of_diamonds.png);
+}
+.ruutu5{
+    background-image: url(./Kortit/5_of_diamonds.png);
+}
+.ruutu6{
+    background-image: url(./Kortit/6_of_diamonds.png);
+}
+.ruutu7{
+    background-image: url(./Kortit/7_of_diamonds.png);
+}
+.ruutu8{
+    background-image: url(./Kortit/8_of_diamonds.png);
+}
+.ruutu9{
+    background-image: url(./Kortit/9_of_diamonds.png);
+}
+.ruutu10{
+    background-image: url(./Kortit/10_of_diamonds.png);
+}
+.ruutuJ{
+    background-image: url(./Kortit/jack_of_diamonds2.png);
+}
+.ruutuQ{
+    background-image: url(./Kortit/queen_of_diamonds2.png);
+}
+.ruutuK{
+    background-image: url(./Kortit/king_of_diamonds2.png);
+}
+.ruutuA{
+    background-image: url(./Kortit/ace_of_diamonds.png);
+}
+.pata2{
+    background-image: url(./Kortit/2_of_spades.png);
+}
+.pata3{
+    background-image: url(./Kortit/3_of_spades.png);
+}
+.pata4{
+    background-image: url(./Kortit/4_of_spades.png);
+}
+.pata5{
+    background-image: url(./Kortit/5_of_spades.png);
+}
+.pata6{
+    background-image: url(./Kortit/6_of_spades.png);
+}
+.pata7{
+    background-image: url(./Kortit/7_of_spades.png);
+}
+.pata8{
+    background-image: url(./Kortit/8_of_spades.png);
+}
+.pata9{
+    background-image: url(./Kortit/9_of_spades.png);
+}
+.pata10{
+    background-image: url(./Kortit/10_of_spades.png);
+}
+.pataJ{
+    background-image: url(./Kortit/jack_of_spades2.png);
+}
+.pataQ{
+    background-image: url(./Kortit/queen_of_spades2.png);
+}
+.pataK{
+    background-image: url(./Kortit/king_of_spades2.png);
+}
+.pataA{
+    background-image: url(./Kortit/ace_of_spades.png);
+}
+
+.none {
+    display: none;
 }

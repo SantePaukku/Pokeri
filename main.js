@@ -80,7 +80,7 @@ document.getElementById("doublingCard").innerHTML = "";
   }
   if (holdCard1.value == "Switch") {
     document.getElementById("displayCardsOne").innerHTML = deck.pop();
-    //document.getElementById("displayCardsOne").innerHTML = "10 of Clubs";
+    //document.getElementById("displayCardsOne").innerHTML = "2 of Clubs";
   }
   if (holdCard2.value == "Switch") {
     document.getElementById("displayCardsTwo").innerHTML = deck.pop();
@@ -610,6 +610,187 @@ card5Number = Number(card5.substr(0,1))
     //document.getElementById("displayMoney").innerHTML = "Money:" + " " + moneyValue + "€";
     document.getElementById("doublingTittle").innerHTML = "";
 }
+// Display image test
+let cardImageValue1 = document.getElementById("displayCardsOne").innerHTML
+let cardImageValue2 = document.getElementById("displayCardsTwo").innerHTML
+let cardImageValue3 = document.getElementById("displayCardsThree").innerHTML
+let cardImageValue4 = document.getElementById("displayCardsFour").innerHTML
+let cardImageValue5 = document.getElementById("displayCardsFive").innerHTML
+
+switch (cardImageValue1) {
+    case '2♣':
+    console.log('Risti kaksi');
+    document.getElementById("displayImageOne").classList.add("risti2");
+    document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '3♣':
+      document.getElementById("displayImageOne").classList.add("risti3");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '4♣':
+      document.getElementById("displayImageOne").classList.add("risti4");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '5♣':
+      document.getElementById("displayImageOne").classList.add("risti5");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '6♣':
+      document.getElementById("displayImageOne").classList.add("risti6");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '7♣':
+      document.getElementById("displayImageOne").classList.add("risti7");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '8♣':
+      document.getElementById("displayImageOne").classList.add("risti8");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '9♣':
+      document.getElementById("displayImageOne").classList.add("risti9");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '10♣':
+      document.getElementById("displayImageOne").classList.add("risti10");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'J♣':
+      document.getElementById("displayImageOne").classList.add("ristiJ");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'Q♣':
+      document.getElementById("displayImageOne").classList.add("ristiQ");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'K♣':
+      document.getElementById("displayImageOne").classList.add("ristiK");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'A♣':
+      document.getElementById("displayImageOne").classList.add("ristiA");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+
+    case '2♥':
+    console.log('Risti seiska');
+    break;
+    case '3♥':
+    console.log('Risti seiska');
+    break;
+    case '4♥':
+    console.log('Risti seiska');
+    break;
+    case '5♥':
+    console.log('Risti seiska');
+    break;
+    case '6♥':
+    console.log('Risti seiska');
+    break;
+    case '7♥':
+    console.log('Risti seiska');
+    break;
+    case '8♥':
+    console.log('Risti seiska');
+    break;
+    case '9♥':
+    console.log('Risti seiska');
+    break;
+    case '10♥':
+    console.log('Risti seiska');
+    break;
+    case 'J♥':
+    console.log('Risti seiska');
+    break;
+    case 'Q♥':
+    console.log('Risti seiska');
+    break;
+    case 'K♥':
+    console.log('Risti seiska');
+    break;
+    case 'A♥':
+    console.log('Risti seiska');
+    break;
+      case '2♠':
+      console.log('Risti seiska');
+      break;
+      case '3♠':
+      console.log('Risti seiska');
+      break;
+      case '4♠':
+      console.log('Risti seiska');
+      break;
+      case '5♠':
+      console.log('Risti seiska');
+      break;
+      case '6♠':
+      console.log('Risti seiska');
+      break;
+      case '7♠':
+      console.log('Risti seiska');
+      break;
+      case '8♠':
+      console.log('Risti seiska');
+      break;
+      case '9♠':
+      console.log('Risti seiska');
+      break;
+      case '10♠':
+      console.log('Risti seiska');
+      break;
+      case 'J♠':
+      console.log('Risti seiska');
+      break;
+      case 'Q♠':
+      console.log('Risti seiska');
+      break;
+      case 'K♠':
+      console.log('Risti seiska');
+      break;
+      case 'A♠':
+      console.log('Risti seiska');
+      break;
+      case '2♦':
+      console.log('Risti seiska');
+      break;
+      case '3♦':
+      console.log('Risti seiska');
+      break;
+      case '4♦':
+      console.log('Risti seiska');
+      break;
+      case '5♦':
+      console.log('Risti seiska');
+      break;
+      case '6♦':
+      console.log('Risti seiska');
+      break;
+      case '7♦':
+      console.log('Risti seiska');
+      break;
+      case '8♦':
+      console.log('Risti seiska');
+      break;
+      case '9♦':
+      console.log('Risti seiska');
+      break;
+      case '10♦':
+      console.log('Risti seiska');
+      break;
+      case 'J♦':
+      console.log('Risti seiska');
+      break;
+      case 'Q♦':
+      console.log('Risti seiska');
+      break;
+      case 'K♦':
+      console.log('Risti seiska');
+      break;
+      case 'A♦':
+      console.log('Risti seiska');
+      break;
+}
+
   };
   function doublingStart() {
     if (winningMoney > 0) {
@@ -824,3 +1005,4 @@ card5Number = Number(card5.substr(0,1))
   //element.classList.remove("my-class");
   //document.getElementById("displayMoney").innerHTML = moneyValue = moneyValue + 2;
   //♠♥♦♣
+
