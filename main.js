@@ -610,6 +610,7 @@ card5Number = Number(card5.substr(0,1))
     //document.getElementById("displayMoney").innerHTML = "Money:" + " " + moneyValue + "€";
     document.getElementById("doublingTittle").innerHTML = "";
 }
+/*
 // Display image test
 let cardImageValue1 = document.getElementById("displayCardsOne").innerHTML
 let cardImageValue2 = document.getElementById("displayCardsTwo").innerHTML
@@ -673,123 +674,166 @@ switch (cardImageValue1) {
     break;
 
     case '2♥':
-    console.log('Risti seiska');
-    break;
-    case '3♥':
-    console.log('Risti seiska');
-    break;
-    case '4♥':
-    console.log('Risti seiska');
-    break;
-    case '5♥':
-    console.log('Risti seiska');
-    break;
-    case '6♥':
-    console.log('Risti seiska');
-    break;
-    case '7♥':
-    console.log('Risti seiska');
-    break;
-    case '8♥':
-    console.log('Risti seiska');
-    break;
-    case '9♥':
-    console.log('Risti seiska');
-    break;
-    case '10♥':
-    console.log('Risti seiska');
-    break;
-    case 'J♥':
-    console.log('Risti seiska');
-    break;
-    case 'Q♥':
-    console.log('Risti seiska');
-    break;
-    case 'K♥':
-    console.log('Risti seiska');
-    break;
-    case 'A♥':
-    console.log('Risti seiska');
-    break;
+      console.log('hertta kaksi');
+      document.getElementById("displayImageOne").classList.add("hertta2");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '3♥':
+        document.getElementById("displayImageOne").classList.add("hertta3");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '4♥':
+        document.getElementById("displayImageOne").classList.add("hertta4");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '5♥':
+        document.getElementById("displayImageOne").classList.add("hertta5");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '6♥':
+        document.getElementById("displayImageOne").classList.add("hertta6");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '7♥':
+        document.getElementById("displayImageOne").classList.add("hertta7");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '8♥':
+        document.getElementById("displayImageOne").classList.add("hertta8");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '9♥':
+        document.getElementById("displayImageOne").classList.add("hertta9");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '10♥':
+        document.getElementById("displayImageOne").classList.add("hertta10");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'J♥':
+        document.getElementById("displayImageOne").classList.add("herttaJ");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'Q♥':
+        document.getElementById("displayImageOne").classList.add("herttaQ");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'K♥':
+        document.getElementById("displayImageOne").classList.add("herttaK");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'A♥':
+        document.getElementById("displayImageOne").classList.add("herttaA");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
       case '2♠':
-      console.log('Risti seiska');
-      break;
-      case '3♠':
-      console.log('Risti seiska');
-      break;
-      case '4♠':
-      console.log('Risti seiska');
-      break;
-      case '5♠':
-      console.log('Risti seiska');
-      break;
-      case '6♠':
-      console.log('Risti seiska');
-      break;
-      case '7♠':
-      console.log('Risti seiska');
-      break;
-      case '8♠':
-      console.log('Risti seiska');
-      break;
-      case '9♠':
-      console.log('Risti seiska');
-      break;
-      case '10♠':
-      console.log('Risti seiska');
-      break;
-      case 'J♠':
-      console.log('Risti seiska');
-      break;
-      case 'Q♠':
-      console.log('Risti seiska');
-      break;
-      case 'K♠':
-      console.log('Risti seiska');
-      break;
-      case 'A♠':
-      console.log('Risti seiska');
-      break;
+        console.log('pata kaksi');
+        document.getElementById("displayImageOne").classList.add("pata2");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '3♠':
+          document.getElementById("displayImageOne").classList.add("pata3");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '4♠':
+          document.getElementById("displayImageOne").classList.add("pata4");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '5♠':
+          document.getElementById("displayImageOne").classList.add("pata5");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '6♠':
+          document.getElementById("displayImageOne").classList.add("pata6");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '7♠':
+          document.getElementById("displayImageOne").classList.add("pata7");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '8♠':
+          document.getElementById("displayImageOne").classList.add("pata8");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '9♠':
+          document.getElementById("displayImageOne").classList.add("pata9");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '10♠':
+          document.getElementById("displayImageOne").classList.add("pata10");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'J♠':
+          document.getElementById("displayImageOne").classList.add("pataJ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'Q♠':
+          document.getElementById("displayImageOne").classList.add("pataQ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'K♠':
+          document.getElementById("displayImageOne").classList.add("pataK");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'A♠':
+          document.getElementById("displayImageOne").classList.add("pataA");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
       case '2♦':
-      console.log('Risti seiska');
-      break;
-      case '3♦':
-      console.log('Risti seiska');
-      break;
-      case '4♦':
-      console.log('Risti seiska');
-      break;
-      case '5♦':
-      console.log('Risti seiska');
-      break;
-      case '6♦':
-      console.log('Risti seiska');
-      break;
-      case '7♦':
-      console.log('Risti seiska');
-      break;
-      case '8♦':
-      console.log('Risti seiska');
-      break;
-      case '9♦':
-      console.log('Risti seiska');
-      break;
-      case '10♦':
-      console.log('Risti seiska');
-      break;
-      case 'J♦':
-      console.log('Risti seiska');
-      break;
-      case 'Q♦':
-      console.log('Risti seiska');
-      break;
-      case 'K♦':
-      console.log('Risti seiska');
-      break;
-      case 'A♦':
-      console.log('Risti seiska');
-      break;
+        console.log('ruutu kaksi');
+        document.getElementById("displayImageOne").classList.add("ruutu2");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '3♦':
+          document.getElementById("displayImageOne").classList.add("ruutu3");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '4♦':
+          document.getElementById("displayImageOne").classList.add("ruutu4");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '5♦':
+          document.getElementById("displayImageOne").classList.add("ruutu5");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '6♦':
+          document.getElementById("displayImageOne").classList.add("ruutu6");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '7♦':
+          document.getElementById("displayImageOne").classList.add("ruutu7");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '8♦':
+          document.getElementById("displayImageOne").classList.add("ruutu8");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '9♦':
+          document.getElementById("displayImageOne").classList.add("ruutu9");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '10♦':
+          document.getElementById("displayImageOne").classList.add("ruutu10");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'J♦':
+          document.getElementById("displayImageOne").classList.add("ruutuJ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'Q♦':
+          document.getElementById("displayImageOne").classList.add("ruutuQ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'K♦':
+          document.getElementById("displayImageOne").classList.add("ruutuK");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'A♦':
+          document.getElementById("displayImageOne").classList.add("ruutuA");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
 }
+*/
 
   };
   function doublingStart() {
@@ -1000,6 +1044,230 @@ switch (cardImageValue1) {
     let uusiTeksti = tervehdys.replace("World","Planet")
   document.getElementById("muutaTekstia2").innerHTML = uusiTeksti
   };
+
+function displayCardImages() {
+let cardImageValue1 = document.getElementById("displayCardsOne").innerHTML
+let cardImageValue2 = document.getElementById("displayCardsTwo").innerHTML
+let cardImageValue3 = document.getElementById("displayCardsThree").innerHTML
+let cardImageValue4 = document.getElementById("displayCardsFour").innerHTML
+let cardImageValue5 = document.getElementById("displayCardsFive").innerHTML
+
+switch (cardImageValue1) {
+    case '2♣':
+    console.log('Risti kaksi');
+    document.getElementById("displayImageOne").classList.add("risti2");
+    document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '3♣':
+      document.getElementById("displayImageOne").classList.add("risti3");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '4♣':
+      document.getElementById("displayImageOne").classList.add("risti4");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '5♣':
+      document.getElementById("displayImageOne").classList.add("risti5");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '6♣':
+      document.getElementById("displayImageOne").classList.add("risti6");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '7♣':
+      document.getElementById("displayImageOne").classList.add("risti7");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '8♣':
+      document.getElementById("displayImageOne").classList.add("risti8");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '9♣':
+      document.getElementById("displayImageOne").classList.add("risti9");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case '10♣':
+      document.getElementById("displayImageOne").classList.add("risti10");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'J♣':
+      document.getElementById("displayImageOne").classList.add("ristiJ");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'Q♣':
+      document.getElementById("displayImageOne").classList.add("ristiQ");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'K♣':
+      document.getElementById("displayImageOne").classList.add("ristiK");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+    case 'A♣':
+      document.getElementById("displayImageOne").classList.add("ristiA");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+    break;
+
+    case '2♥':
+      console.log('hertta kaksi');
+      document.getElementById("displayImageOne").classList.add("hertta2");
+      document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '3♥':
+        document.getElementById("displayImageOne").classList.add("hertta3");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '4♥':
+        document.getElementById("displayImageOne").classList.add("hertta4");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '5♥':
+        document.getElementById("displayImageOne").classList.add("hertta5");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '6♥':
+        document.getElementById("displayImageOne").classList.add("hertta6");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '7♥':
+        document.getElementById("displayImageOne").classList.add("hertta7");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '8♥':
+        document.getElementById("displayImageOne").classList.add("hertta8");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '9♥':
+        document.getElementById("displayImageOne").classList.add("hertta9");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '10♥':
+        document.getElementById("displayImageOne").classList.add("hertta10");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'J♥':
+        document.getElementById("displayImageOne").classList.add("herttaJ");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'Q♥':
+        document.getElementById("displayImageOne").classList.add("herttaQ");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'K♥':
+        document.getElementById("displayImageOne").classList.add("herttaK");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case 'A♥':
+        document.getElementById("displayImageOne").classList.add("herttaA");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+      break;
+      case '2♠':
+        console.log('pata kaksi');
+        document.getElementById("displayImageOne").classList.add("pata2");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '3♠':
+          document.getElementById("displayImageOne").classList.add("pata3");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '4♠':
+          document.getElementById("displayImageOne").classList.add("pata4");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '5♠':
+          document.getElementById("displayImageOne").classList.add("pata5");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '6♠':
+          document.getElementById("displayImageOne").classList.add("pata6");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '7♠':
+          document.getElementById("displayImageOne").classList.add("pata7");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '8♠':
+          document.getElementById("displayImageOne").classList.add("pata8");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '9♠':
+          document.getElementById("displayImageOne").classList.add("pata9");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '10♠':
+          document.getElementById("displayImageOne").classList.add("pata10");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'J♠':
+          document.getElementById("displayImageOne").classList.add("pataJ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'Q♠':
+          document.getElementById("displayImageOne").classList.add("pataQ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'K♠':
+          document.getElementById("displayImageOne").classList.add("pataK");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'A♠':
+          document.getElementById("displayImageOne").classList.add("pataA");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+      case '2♦':
+        console.log('ruutu kaksi');
+        document.getElementById("displayImageOne").classList.add("ruutu2");
+        document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '3♦':
+          document.getElementById("displayImageOne").classList.add("ruutu3");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '4♦':
+          document.getElementById("displayImageOne").classList.add("ruutu4");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '5♦':
+          document.getElementById("displayImageOne").classList.add("ruutu5");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '6♦':
+          document.getElementById("displayImageOne").classList.add("ruutu6");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '7♦':
+          document.getElementById("displayImageOne").classList.add("ruutu7");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '8♦':
+          document.getElementById("displayImageOne").classList.add("ruutu8");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '9♦':
+          document.getElementById("displayImageOne").classList.add("ruutu9");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case '10♦':
+          document.getElementById("displayImageOne").classList.add("ruutu10");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'J♦':
+          document.getElementById("displayImageOne").classList.add("ruutuJ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'Q♦':
+          document.getElementById("displayImageOne").classList.add("ruutuQ");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'K♦':
+          document.getElementById("displayImageOne").classList.add("ruutuK");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+        case 'A♦':
+          document.getElementById("displayImageOne").classList.add("ruutuA");
+          document.getElementById("displayImageOne").classList.add("cardImageStyle");
+        break;
+}
+};
   // document.getElementById("gameWinnerIs").innerHTML = "Pelaaja";
   //tulos2.textContent.includes("Bot: Kivi")
   //element.classList.remove("my-class");
