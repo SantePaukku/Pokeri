@@ -5,6 +5,8 @@ body {
 .displayCards {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 .red {
     color: red;
@@ -26,11 +28,13 @@ body {
 
 .holdButton {
     font-size: 16px;
-    margin: 20px 90px;
+    margin: 20px 94px;
+    width: 64px;
 }
 
 #winningTittle {
     margin-left: 45%;
+    height: 15px;
 }
 
 #doubling {
@@ -56,6 +60,7 @@ body {
 #displayMoney {
     text-align: right;
     margin-right: 50px;
+    margin-top: -35px;
 }
 
 #winningMoneyDisplay {
@@ -73,6 +78,10 @@ body {
     width: 300px;
     height: 250px;
     background-repeat: no-repeat;
+}
+
+#doublingButtonsDiv {
+    margin-top: 20px;
 }
 .risti2{
     background-image: url(./Kortit/2_of_clubs.png);

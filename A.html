@@ -22,7 +22,7 @@
             id="dealButton"
             type="button"
             class=""
-            onclick="deal(); displayCardImages()"
+            onclick="deal(); displayCardImages(); resetDoublingCardImage()"
             value="Deal" >
 <!--
             <input 
@@ -95,11 +95,12 @@
 <div id="doubling">
     <div>
         <h1 id="doublingTittle" ></h1>
-        <h1 id="doublingCard" class="displayCardsCards"></h1>
+        <h1 id="doublingCard" class="displayCardsCards none"></h1>
+        <div id="doublingDisplayCardImage" class=""></div>
     </div>
-    <div>
-        <input id="doublingLow" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickLow()" value="Low" >
-        <input id="doublingHigh" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickHigh()" value="High" >
+    <div id="doublingButtonsDiv">
+        <input id="doublingLow" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickLow(); doublingShowCardImage()" value="Low" >
+        <input id="doublingHigh" class="doublingButtons tuplaus" type="button" disabled onclick="doublingPickHigh(); doublingShowCardImage()" value="High" >
     </div>    
 </div>
 
